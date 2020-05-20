@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'reiki',
+    name: 'app',
     script: 'dist/server.js',
     watch: false,
     env: {
