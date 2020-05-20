@@ -1,19 +1,17 @@
 const nodeExternals = require('webpack-node-externals');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: __dirname + '/server.js',
+    entry: {
+        main: './src/index.js'
+    },
     output: {
         path: __dirname + '/dist',
-        filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/',
+        filename: '[name].js'
     },
-    target: 'node',
-    node: {
-        __dirname: false,
-        __filename: false
-    },
-    externals: [nodeExternals()],
+    target: 'web',
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -23,14 +21,25 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html-loader'
+                use: {
+                    loader: 'html-loader',
+                    options: {minimize: false}
+                }
+            },
+            {
+                test: /\.css$/,
+                loader: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader'
             }
         ]
     },
     plugins: [
-        new HtmlWebPackPlugin({
-            template: './dist/index.html',
-            filename: './dist/index.html',
+        new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            filename: './index.html',
             excludeChunks: ['server']
         })
     ]
