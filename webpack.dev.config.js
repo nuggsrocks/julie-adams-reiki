@@ -1,14 +1,19 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: [
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+            './src/index.js'
+        ]
     },
     output: {
         path: __dirname + '/dist',
         publicPath: '/',
         filename: '[name].js'
     },
+    mode: 'development',
     target: 'web',
     devtool: 'source-map',
     module: {
@@ -21,8 +26,7 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: {
-                    loader: 'html-loader',
-                    options: {minimize: false}
+                    loader: 'html-loader'
                 }
             },
             {
@@ -40,6 +44,7 @@ module.exports = {
             template: './src/html/index.html',
             filename: './index.html',
             excludeChunks: ['server']
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
