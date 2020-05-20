@@ -4,9 +4,8 @@ const App = () => {
     return (
         <div>
             <div className="content">
-                <h1>Rexpack</h1>
-                <p className="description">React</p>
-                <div className="awful-selfie"/>
+                <h1>Julie Adams Reiki</h1>
+                <p className="description">Julie Adams is a reiki practitioner in Traverse City, Michigan</p>
             </div>
         </div>
     )
