@@ -5,7 +5,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: './src/js/index.js'
     },
     output: {
         path: __dirname + '/dist',
