@@ -7,6 +7,8 @@ import ReikiSession from './reiki-session';
 import ReikiTherapy from './reiki-therapy';
 import Services from './services';
 import Testimonials from './testimonials';
+import '../../scss/index.scss';
+
 
 const routes = [
 	{path: '/about-me', Component: AboutMe},
