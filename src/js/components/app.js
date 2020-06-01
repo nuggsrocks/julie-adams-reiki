@@ -26,16 +26,14 @@ const routes = [
 const Menu = () => {
 	return (
 		<nav id='menu'>
-			<h1>
+			<h1 className='menu-item'>
 				Julie Adams Reiki
 			</h1>
-			<div>
-				{
-					routes.map(({name, path}) => 
-						<Link class='link' key={name} to={path}>{name}</Link>
-					)
-				}
-			</div>
+			{
+				routes.map(({name, path}) => 
+					<Link className='link menu-item' key={name} to={path}>{name}</Link>
+				)
+			}
 		</nav>
 	)
 }

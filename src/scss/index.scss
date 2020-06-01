@@ -15,9 +15,30 @@ h1, h2, h3, h4, h5, h6 {
 #menu {
 	display: flex;
 	align-items: center;
+	background-color: $secondary;
+	box-shadow: 0 2px black;
+	height: 50px;
+}
+
+.menu-item {
+	padding: 10px;
 }
 
 .link {
 	color: $terciary;
+	text-decoration: none;
+	transition: 200ms;
+}
+
+.link:hover {
+	color: $secondary;
+	text-shadow: 1px 0 $terciary,
+	0 1px $terciary,
+	-1px 0 $terciary,
+	0 -1px $terciary,
+	1px 1px $terciary,
+	1px -1px $terciary,
+	-1px -1px $terciary,
+	-1px 1px $terciary;
 	text-decoration: none;
 }
