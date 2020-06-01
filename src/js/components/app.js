@@ -1,7 +1,6 @@
 // dependencies
 import React from 'react';
 import {BrowserRouter, Route, Redirect, Link} from 'react-router-dom';
-import {Navbar, Nav} from 'react-bootstrap';
 // components
 import AboutMe from './about-me';
 import Contact from './contact';
@@ -26,16 +25,18 @@ const routes = [
 
 const Menu = () => {
 	return (
-		<Navbar>
-			<Navbar.Brand>Julie Adams Reiki</Navbar.Brand>
-			<Nav>
+		<nav id='menu'>
+			<h1>
+				Julie Adams Reiki
+			</h1>
+			<div>
 				{
 					routes.map(({name, path}) => 
-						<Nav.Link key={name} as={Link} to={path}>{name}</Nav.Link>
+						<Link class='link' key={name} to={path}>{name}</Link>
 					)
 				}
-			</Nav>
-		</Navbar>
+			</div>
+		</nav>
 	)
 }
 

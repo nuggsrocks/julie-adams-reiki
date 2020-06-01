@@ -1,3 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
+$main: purple;
+$secondary: blue;
+$terciary: yellow;
 
+body {
+	background-color: $main;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $terciary;
+}
+
+#menu {
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	color: $terciary;
+	text-decoration: none;
+}
