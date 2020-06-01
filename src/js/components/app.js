@@ -1,5 +1,8 @@
+// dependencies
 import React from 'react';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect, Link} from 'react-router-dom';
+import {Navbar, Nav} from 'react-bootstrap';
+// components
 import AboutMe from './about-me';
 import Contact from './contact';
 import References from './references';
@@ -7,23 +10,42 @@ import ReikiSession from './reiki-session';
 import ReikiTherapy from './reiki-therapy';
 import Services from './services';
 import Testimonials from './testimonials';
+//stylesheet
 import '../../scss/index.scss';
 
 
 const routes = [
-	{path: '/about-me', Component: AboutMe},
-	{path: '/contact', Component: Contact},
-	{path: '/references', Component: References},
-	{path: '/reiki-session', Component: ReikiSession},
-	{path: '/reiki-therapy', Component: ReikiTherapy},
-	{path: '/services', Component: Services},
-	{path: '/testimonials', Component: Testimonials}
+	{name: 'About Me', path: '/about-me', Component: AboutMe},
+	{name: 'Contact', path: '/contact', Component: Contact},
+	{name: 'References', path: '/references', Component: References},
+	{name: 'Reiki Session', path: '/reiki-session', Component: ReikiSession},
+	{name: 'Reiki Therapy', path: '/reiki-therapy', Component: ReikiTherapy},
+	{name: 'Services', path: '/services', Component: Services},
+	{name: 'Testimonials', path: '/testimonials', Component: Testimonials}
 ];
+
+const Menu = () => {
+	return (
+		<Navbar>
+			<Navbar.Brand>Julie Adams Reiki</Navbar.Brand>
+			<Nav>
+				{
+					routes.map(({name, path}) => 
+						<Nav.Link key={name} as={Link} to={path}>{name}</Nav.Link>
+					)
+				}
+			</Nav>
+		</Navbar>
+	)
+}
 
 
 const App = () => {
 	return (
 		<BrowserRouter basename='/'>
+		<Route path='/'>
+			<Menu/>
+		</Route>
 		{
 			routes.map(({path, Component}) => 
 				<Route key={path} exact path={path}>
