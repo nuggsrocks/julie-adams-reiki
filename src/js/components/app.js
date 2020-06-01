@@ -45,6 +45,7 @@ const App = () => {
 		<Route path='/'>
 			<Menu/>
 		</Route>
+		<div className='component-div'>
 		{
 			routes.map(({path, Component}) => 
 				<Route key={path} exact path={path}>
@@ -52,6 +53,7 @@ const App = () => {
 				</Route>
 			)
 		}
+		</div>
 		<Redirect to='/about-me'/>
 		</BrowserRouter>
 	)
