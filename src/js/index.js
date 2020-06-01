@@ -1,7 +1,7 @@
 // dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 //components
 import Menu from './components/menu';
 import Main from './components/main';
@@ -18,7 +18,6 @@ const App = () => {
 			<Main/>
 			<Footer/>
 		</Route>
-		<Redirect to='/about-me'/>
 		</BrowserRouter>
 	)
 };

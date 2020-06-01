@@ -7,7 +7,7 @@ import Services from './components/services';
 import Testimonials from './components/testimonials';
 
 const routes = [
-	{name: 'About Me', path: '/about-me', Component: AboutMe},
+	{name: 'About Me', path: '/', Component: AboutMe},
 	{name: 'Contact', path: '/contact', Component: Contact},
 	{name: 'References', path: '/references', Component: References},
 	{name: 'Reiki Session', path: '/reiki-session', Component: ReikiSession},
