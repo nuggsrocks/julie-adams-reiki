@@ -7,13 +7,13 @@ import Services from './components/services';
 import Testimonials from './components/testimonials';
 
 const routes = [
-	{path: '/about-me', Component: AboutMe},
-	{path: '/contact', Component: Contact},
-	{path: '/references', Component: References},
-	{path: '/reiki-session', Component: ReikiSession},
-	{path: '/reiki-therapy', Component: ReikiTherapy},
-	{path: '/services', Component: Services},
-	{path: '/testimonials', Component: Testimonials}
+	{name: 'About Me', path: '/about-me', Component: AboutMe},
+	{name: 'Contact', path: '/contact', Component: Contact},
+	{name: 'References', path: '/references', Component: References},
+	{name: 'Reiki Session', path: '/reiki-session', Component: ReikiSession},
+	{name: 'Reiki Therapy', path: '/reiki-therapy', Component: ReikiTherapy},
+	{name: 'Services', path: '/services', Component: Services},
+	{name: 'Testimonials', path: '/testimonials', Component: Testimonials}
 ];
 
 export default routes;
