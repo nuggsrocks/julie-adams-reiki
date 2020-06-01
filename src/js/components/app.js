@@ -1,8 +1,9 @@
 // dependencies
 import React from 'react';
-import {BrowserRouter, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 //components
 import Menu from './menu';
+import Footer from './footer';
 //routes
 import routes from '../routes';
 //stylesheet
@@ -15,15 +16,22 @@ const App = () => {
 		<Route path='/'>
 			<Menu/>
 		</Route>
-		<div className='component-div'>
+		<Switch>
 		{
 			routes.map(({path, Component}) => 
 				<Route key={path} exact path={path}>
-					<Component/>
+					<div className='component'>
+						<Component/>
+					</div>
 				</Route>
 			)
 		}
-		</div>
+		</Switch>
+		<Route path='/'>
+			<div className='footer'>
+				<Footer/>
+			</div>
+		</Route>
 		<Redirect to='/about-me'/>
 		</BrowserRouter>
 	)

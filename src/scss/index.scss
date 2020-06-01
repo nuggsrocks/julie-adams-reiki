@@ -43,7 +43,13 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 }
 
-.component-div {
-	padding: 10px;
+div.component {
+	padding-top: 10px;
 	text-align: center;
+}
+
+div.footer {
+	padding: 20px;
+	text-align: center;
+
 }
