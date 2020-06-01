@@ -1,11 +1,10 @@
 // dependencies
 import React from 'react';
-import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 //components
 import Menu from './menu';
+import Main from './main';
 import Footer from './footer';
-//routes
-import routes from '../routes';
 //stylesheet
 import '../../scss/index.scss';
 
@@ -15,22 +14,8 @@ const App = () => {
 		<BrowserRouter basename='/'>
 		<Route path='/'>
 			<Menu/>
-		</Route>
-		<Switch>
-		{
-			routes.map(({path, Component}) => 
-				<Route key={path} exact path={path}>
-					<div className='component'>
-						<Component/>
-					</div>
-				</Route>
-			)
-		}
-		</Switch>
-		<Route path='/'>
-			<div className='footer'>
-				<Footer/>
-			</div>
+			<Main/>
+			<Footer/>
 		</Route>
 		<Redirect to='/about-me'/>
 		</BrowserRouter>
