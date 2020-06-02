@@ -5,7 +5,7 @@ import routes from '../routes';
 const Menu = () => {
 	return (
 		<nav id='menu'>
-			<h1 className='menu-item'>
+			<h1 className='menu-item title'>
 				Julie Adams Reiki
 			</h1>
 			{
