@@ -1,11 +1,15 @@
 import React from 'react';
-import text from '../text.js';
+import text from '../../text/about-me.js';
 
 const AboutMe = () => {
 	return (
 		<div>
 			<h3>About Me</h3>
-			<p>{text}</p>
+			{
+				text.map((value, index) =>
+					<p key={index}>{value}</p>
+				)
+			}
 		</div>
 	)
 };
