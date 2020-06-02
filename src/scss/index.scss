@@ -1,21 +1,32 @@
 @import '~bootstrap/scss/bootstrap';
 
-$main: purple;
-$secondary: blue;
-$terciary: yellow;
+$main: #cf69ff;
+$secondary: #69b6ff;
+$secondary-dark: #0083ff;
+$terciary: #fcfc6f;
 
 body {
 	background-color: $main;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+	color: $secondary;
+}
+
+h3 {
 	color: $terciary;
+	background-color: $secondary;
+	padding: 10px;
+}
+
+p {
+	font-size: 18px;
 }
 
 #menu {
 	display: flex;
 	align-items: center;
-	background-color: $secondary;
+	background-color: $terciary;
 	box-shadow: 0 2px black;
 	height: 50px;
 }
@@ -25,13 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .link {
-	color: $terciary;
+	color: $secondary;
 	text-decoration: none;
 	transition: 200ms;
 }
 
 .link:hover {
-	color: $secondary;
+	color: $secondary-dark;
 	text-shadow: 1px 0 $terciary,
 	0 1px $terciary,
 	-1px 0 $terciary,
@@ -41,15 +52,72 @@ h1, h2, h3, h4, h5, h6 {
 	-1px -1px $terciary,
 	-1px 1px $terciary;
 	text-decoration: none;
+	transform: scale(1.15);
 }
 
 div.component {
-	padding-top: 10px;
+	padding: 10px 50px 10px 50px;
 	text-align: center;
 }
 
 div#footer {
 	padding: 20px;
 	text-align: center;
+
+}
+
+@media only screen and (max-device-width: 414px) {
+	body {
+		
+	}
+
+	h1 {
+		font-size: 90px;
+	}
+
+	h3 {
+		font-size: 80px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 40px;
+	}
+
+	#menu {
+		flex-direction: column;
+		height: auto;
+		box-shadow: none;
+	}
+
+	.menu-item {
+		
+	}
+
+	.link {
+		font-size: 45px;
+		width: 100%;
+		transition: 0s;
+		text-align: center;
+	}
+
+	.link:focus, .link:hover {
+		color: $terciary;
+		background-color: $secondary;
+		text-shadow: none;
+		font-weight: bolder;
+		transform: none;
+	}
+
+	div.component {
+		padding-top: 30px;
+		text-align: center;
+	}
+
+	div#footer {
+		padding: 20px;
+		text-align: center;
+		font-size: 40px;
+	}
 
 }
