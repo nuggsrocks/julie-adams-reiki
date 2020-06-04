@@ -5,6 +5,7 @@ $secondary: #69b6ff;
 $secondary-dark: #0083ff;
 $terciary: #fcfc6f;
 
+
 body {
 	background-color: $main;
 }
@@ -28,7 +29,7 @@ p {
 	align-items: center;
 	background-color: $terciary;
 	box-shadow: 0 2px black;
-	height: 50px;
+	height: 70px;
 }
 
 .menu-item {
@@ -41,7 +42,7 @@ p {
 	transition: 200ms;
 }
 
-.link:hover {
+.link:hover, .link:focus {
 	color: $secondary-dark;
 	text-shadow: 1px 0 $terciary,
 	0 1px $terciary,
@@ -55,6 +56,10 @@ p {
 	transform: scale(1.15);
 }
 
+.title {
+	cursor: pointer;
+}
+
 div.component {
 	padding: 10px 50px 10px 50px;
 	text-align: center;
@@ -66,7 +71,7 @@ div#footer {
 
 }
 
-@media only screen and (max-device-width: 414px) {
+@media only screen and (max-width: 414px) {
 	body {
 		
 	}
@@ -87,7 +92,6 @@ div#footer {
 	.title {
 		color: $terciary;
 		background-color: $secondary;
-		height: 200px;
 	}
 
 	#menu {
@@ -97,19 +101,17 @@ div#footer {
 	}
 
 	.menu-item {
-			display: flex;
+		display: flex;
 		width: 100%;
-justify-content: center;
+		justify-content: center;
 		align-items: center;
-
 	}
 
-	
+
 	.link {
 		height: 150px;
-
-				font-size: 55px;
-						transition: 0s;
+		font-size: 55px;
+		transition: 0s;
 	}
 
 	.link:focus, .link:hover {
@@ -132,3 +134,69 @@ justify-content: center;
 	}
 
 }
+
+@media only screen and (max-width: 1026px) {
+	body {
+		
+	}
+
+	h1 {
+		font-size: 60px;
+	}
+
+	h3 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	.title {
+		color: $terciary;
+		background-color: $secondary;
+		cursor: pointer;
+	}
+
+	#menu {
+		flex-direction: column;
+		height: auto;
+		box-shadow: none;
+	}
+
+	.menu-item {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.link {
+		height: 75px;
+		font-size: 30px;
+		transition: 0s;
+	}
+
+	.link:focus, .link:hover {
+		color: $terciary;
+		background-color: $secondary;
+		text-shadow: none;
+		font-weight: bolder;
+		transform: none;
+	}
+
+	div.component {
+		padding-top: 30px;
+		text-align: center;
+	}
+
+	div#footer {
+		padding: 20px;
+		text-align: center;
+		font-size: 40px;
+	}
+
+}
+
