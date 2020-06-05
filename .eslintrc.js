@@ -9,5 +9,12 @@ module.exports = {
 		react: {
 			version: "detect"
 		}
+	},
+	env: {
+		node: true,
+		browser: true
+	},
+	rules: {
+		"react/prop-types": [0, {skipUndeclared: true}]
 	}
 }
