@@ -10,17 +10,33 @@ import Footer from './components/footer';
 import '../scss/index.scss';
 
 
-const App = () => {
-	return (
-		<BrowserRouter basename='/'>
-		<Route path='/'>
-			<Menu/>
-			<Main/>
-			<Footer/>
-		</Route>
-		</BrowserRouter>
-	)
-};
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			location: '/'
+		};
+		this.changeLocation = this.changeLocation.bind(this);
+	}
+
+	changeLocation(loc) {
+		this.setState({
+			location: loc
+		});
+	}
+
+	render() {
+		return (
+			<BrowserRouter basename='/'>
+				<Route path='/'>
+					<Menu location={this.state.location} changeLocation={this.changeLocation}/>
+					<Main location={this.state.location}/>
+					<Footer/>
+				</Route>
+			</BrowserRouter>
+		)
+	}
+}
 
 if(typeof(module.hot) !== 'undefined') { // eslint-disable-line no-undef
     module.hot.accept() // eslint-disable-line no-undef

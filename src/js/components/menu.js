@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import routes from '../routes';
 
-const Menu = () => {
+const Menu = (props) => {
 	return (
 		<nav id='menu'>
 			<h1 className='menu-item title'>
@@ -10,7 +10,12 @@ const Menu = () => {
 			</h1>
 			{
 				routes.map(({name, path}) => 
-					<Link className='link menu-item' key={name} to={path}>{name}</Link>
+					<Link
+						className='link menu-item' key={name} to={path}
+						onClick={() => props.changeLocation(path)}
+					>
+						{name}
+					</Link>
 				)
 			}
 		</nav>
