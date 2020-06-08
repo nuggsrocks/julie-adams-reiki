@@ -60,15 +60,38 @@ p {
 	cursor: pointer;
 }
 
-div.component {
-	padding: 10px 50px 10px 50px;
+.component {
+	padding: 10px 50px 50px 50px;
 	text-align: center;
+	position: absolute;
 }
 
 div#footer {
-	padding: 20px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: $main;
+	height: 30px;
 	text-align: center;
+}
 
+.component-enter {
+	opacity: 0;
+}
+
+.component-enter-active {
+	opacity: 1;
+	transition: all 200ms;
+}
+
+.component-exit {
+	opacity: 1;
+}
+
+.component-exit-active {
+	opacity: 0;
+	transition: all 200ms;
 }
 
 @media only screen and (max-width: 414px) {
@@ -193,9 +216,7 @@ div#footer {
 	}
 
 	div#footer {
-		padding: 20px;
-		text-align: center;
-		font-size: 40px;
+
 	}
 
 }
