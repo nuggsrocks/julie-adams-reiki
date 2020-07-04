@@ -1,9 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
 $main: #cf69ff;
-$secondary: #69b6ff;
-$secondary-dark: #0083ff;
-$terciary: #fcfc6f;
+$secondary-light: #69b6ff;
+$secondary-dark: #54abff;
+$tertiary: #fcfc6f;
 
 
 body {
@@ -11,12 +11,12 @@ body {
 }
 
 h1 {
-	color: $secondary;
+	color: $secondary-dark;
 }
 
 h3 {
-	color: $terciary;
-	background-color: $secondary;
+	color: $tertiary;
+	background-color: $secondary-dark;
 	padding: 10px;
 }
 
@@ -27,7 +27,7 @@ p {
 #menu {
 	display: flex;
 	align-items: center;
-	background-color: $terciary;
+	background-color: $tertiary;
 	box-shadow: 0 2px black;
 	height: 70px;
 }
@@ -37,23 +37,23 @@ p {
 }
 
 .link {
-	color: $secondary;
+	color: $secondary-light;
 	text-decoration: none;
 	transition: 200ms;
 }
 
 .link:hover, .link:focus {
 	color: $secondary-dark;
-	text-shadow: 1px 0 $terciary,
-	0 1px $terciary,
-	-1px 0 $terciary,
-	0 -1px $terciary,
-	1px 1px $terciary,
-	1px -1px $terciary,
-	-1px -1px $terciary,
-	-1px 1px $terciary;
+	text-shadow: 1px 0 $tertiary,
+	0 1px $tertiary,
+	-1px 0 $tertiary,
+	0 -1px $tertiary,
+	1px 1px $tertiary,
+	1px -1px $tertiary,
+	-1px -1px $tertiary,
+	-1px 1px $tertiary;
 	text-decoration: none;
-	transform: scale(1.15);
+	transform: scale(1.1);
 }
 
 .title {
@@ -113,8 +113,8 @@ div#footer {
 	}
 
 	.title {
-		color: $terciary;
-		background-color: $secondary;
+		color: $tertiary;
+		background-color: $secondary-light;
 	}
 
 	#menu {
@@ -138,8 +138,8 @@ div#footer {
 	}
 
 	.link:focus, .link:hover {
-		color: $terciary;
-		background-color: $secondary;
+		color: $tertiary;
+		background-color: $secondary-light;
 		text-shadow: none;
 		font-weight: bolder;
 		transform: none;
@@ -177,8 +177,8 @@ div#footer {
 	}
 
 	.title {
-		color: $terciary;
-		background-color: $secondary;
+		color: $tertiary;
+		background-color: $secondary-light;
 		cursor: pointer;
 	}
 
@@ -203,8 +203,8 @@ div#footer {
 	}
 
 	.link:focus, .link:hover {
-		color: $terciary;
-		background-color: $secondary;
+		color: $tertiary;
+		background-color: $secondary-light;
 		text-shadow: none;
 		font-weight: bolder;
 		transform: none;
