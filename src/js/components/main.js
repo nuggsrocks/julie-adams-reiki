@@ -5,6 +5,7 @@ import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 const Main = (props) => {
 	return (
+		<div id='main'>
 		<Switch>
 			<TransitionGroup>
 		{
@@ -14,7 +15,7 @@ const Main = (props) => {
 							key={path}
 							in={props.location === path}
 							timeout={200}
-							classNames={'component'}
+							classNames='component'
 							unmountOnExit
 						>
 							<div className='component'>
@@ -27,6 +28,7 @@ const Main = (props) => {
 		}
 			</TransitionGroup>
 		</Switch>
+		</div>
 	)
 };
 

@@ -1,9 +1,0 @@
-const text = ['Nulla facilisi. Nunc consequat in augue ut finibus. Maecenas volutpat fringilla velit, ut scelerisque tellus vehicula eu. Morbi rhoncus mi sit amet libero condimentum pulvinar. Quisque leo massa, facilisis in dui sed, tristique commodo massa. Maecenas sit amet dignissim turpis. Aliquam quis magna imperdiet, auctor erat nec, bibendum metus. Nulla vitae justo at justo tincidunt ornare sit amet eget nunc. Sed facilisis sapien quis tincidunt consectetur. Nunc nec rutrum est, a luctus arcu.',
-
-'Pellentesque in fringilla mi. Morbi viverra auctor dui, ut elementum dui placerat id. Nam eu odio lacinia, vestibulum ipsum et, maximus metus. Aliquam erat volutpat. Morbi imperdiet, erat sed molestie volutpat, lacus risus gravida nunc, nec gravida justo felis vel metus. Nulla malesuada tortor eu ligula fringilla lobortis. Aliquam tortor velit, facilisis ac tortor eget, sollicitudin facilisis enim.',
-
-'Mauris feugiat laoreet sapien at vulputate. Donec sed tincidunt elit. Morbi ullamcorper rhoncus lacinia. Cras sem justo, malesuada ac elit sed, dictum finibus risus. Sed id imperdiet risus, id auctor velit. In pulvinar vehicula enim, ac luctus ipsum consequat vitae. Sed a lorem lorem. Cras pellentesque tellus ac massa congue, eu rhoncus arcu imperdiet.',
-
-'In a est finibus, rhoncus lorem et, rhoncus tortor. Ut ipsum magna, sodales a ligula quis, mollis ornare magna. Maecenas et suscipit dolor, at interdum orci. Curabitur quis purus nulla. Duis nibh purus, fringilla eget porttitor eu, dignissim at eros. Nulla et eleifend urna, bibendum iaculis lectus. Suspendisse luctus ultrices est a bibendum. In scelerisque est quis felis suscipit tincidunt. Nullam dictum volutpat odio a congue. Sed nisl neque, mollis ut felis vel, dictum iaculis orci. Nulla vel libero et metus pretium ornare non eget dolor.'];
-
-export default text;

@@ -1,15 +1,11 @@
 import React from 'react';
-import text from '../../text/services';
+import txt from '../../text/services.txt';
 
 const Services = () => {
 	return (
 		<div>
 			<h3>Services</h3>
-			{
-				text.map((value, index) => 
-					<p key={index}>{value}</p>
-				)
-			}
+			<p>{txt}</p>
 		</div>
 	)
 };

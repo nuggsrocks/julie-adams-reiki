@@ -51,6 +51,10 @@ module.exports = {
 			{
 				test: /\.(png|svg|jpg|gif)$/,
 				loader: 'file-loader'
+			},
+			{
+				test: /\.txt/i,
+				loader: 'raw-loader'
 			}
 		]
 	},

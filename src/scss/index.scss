@@ -18,10 +18,12 @@ h3 {
 	color: $tertiary;
 	background-color: $secondary-dark;
 	padding: 10px;
+	font-size: 40px;
 }
 
 p {
-	font-size: 18px;
+	font-size: 30px;
+	line-height: 50px;
 }
 
 #menu {
@@ -68,11 +70,10 @@ p {
 
 div#footer {
 	position: fixed;
-	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: $main;
-	height: 30px;
+	background-color: $secondary-dark;
+	height: auto;
 	text-align: center;
 }
 

@@ -1,15 +1,11 @@
 import React from 'react';
-import text from '../../text/reiki-session.js';
+import txt from '../../text/reiki-session.txt';
 
 const ReikiSession = () => {
 	return (
 		<div>
 			<h3>Reiki Session</h3>
-			{
-				text.map((value, index) =>
-					<p key={index}>{value}</p>
-				)
-			}
+			<p>{txt}</p>
 		</div>
 	)
 };
