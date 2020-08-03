@@ -1,11 +1,17 @@
 import React from 'react';
-import txt from '../../text/about-me.txt';
+import aboutMeTxt from '../../text/about-me.txt';
+import certTxt from '../../text/certifications.txt';
 
 const AboutMe = () => {
+	console.log(certTxt.split(/\n/ig));
+
+	let aboutMeArr = aboutMeTxt.split(/\n/ig).filter(value => value !== '');
 	return (
 		<div>
 			<h3>About Me</h3>
-			<p>{txt}</p>
+			{
+				aboutMeArr.map(value => <p key={value}>{value}</p>)
+			}
 		</div>
 	)
 };
