@@ -14,16 +14,23 @@ h1 {
 	color: $secondary-dark;
 }
 
-h3 {
+h3, h4 {
+	padding: 10px;
 	color: $tertiary;
 	background-color: $secondary-dark;
-	padding: 10px;
+}
+h3 {
 	font-size: 40px;
+}
+
+h4 {
+	font-size: 35px;
 }
 
 p {
 	font-size: 30px;
 	line-height: 50px;
+	margin: 30px 0 30px 0;
 }
 
 #menu {
@@ -72,8 +79,8 @@ div#footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	background-color: $secondary-dark;
-	height: auto;
+	background-color: $tertiary;
+	height: 25px;
 	text-align: center;
 }
 
