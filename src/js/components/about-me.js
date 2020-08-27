@@ -6,23 +6,29 @@ import {splitAndFilterText} from '../functions';
 const AboutMe = () => {
 	return (
 		<div>
-			<h3>About Me</h3>
-			{
-				splitAndFilterText(aboutMeTxt)
-					.map(value => 
-						<p key={value}>{value}</p>
-					)
-			}
-
 			<section>
-				<h4>Degrees &amp; Certifications</h4>
-
+				<h3>About Me</h3>
 				{
-					splitAndFilterText(certTxt)
+					splitAndFilterText(aboutMeTxt)
 						.map(value => 
 							<p key={value}>{value}</p>
 						)
 				}
+			</section>
+
+			<section>
+				<h3>Degrees &amp; Certifications</h3>
+
+				<table>
+				{
+					splitAndFilterText(certTxt)
+						.map(value => 
+							<tr key={value}>
+								<td>{value}</td>
+							</tr>
+						)
+				}
+				</table>
 				
 			</section>
 		</div>

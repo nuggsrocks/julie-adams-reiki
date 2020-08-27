@@ -5,13 +5,13 @@ import routes from '../routes';
 const Menu = (props) => {
 	return (
 		<nav id='menu'>
-			<h1 className='menu-item title'>
+			<h1>
 				Julie Adams Reiki
 			</h1>
 			{
 				routes.map(({name, path}) => 
 					<Link
-						className='link menu-item' key={name} to={path}
+						className='link' key={name} to={path}
 						onClick={() => props.changeLocation(path)}
 					>
 						{name}

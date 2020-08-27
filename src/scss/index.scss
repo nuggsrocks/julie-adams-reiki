@@ -1,6 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 $main: #cf69ff;
+$main-light: #d885ff;
 $secondary-light: #69b6ff;
 $secondary-dark: #54abff;
 $tertiary: #fcfc6f;
@@ -10,27 +11,21 @@ body {
 	background-color: $main;
 }
 
-h1 {
-	color: $secondary-dark;
-}
 
-h3, h4 {
+
+h3 {
 	padding: 10px;
 	color: $tertiary;
 	background-color: $secondary-dark;
-}
-h3 {
-	font-size: 40px;
+	font-size: 2.5rem;
+	margin: 10px 0 20px 0;
 }
 
-h4 {
-	font-size: 35px;
-}
 
 p {
-	font-size: 30px;
-	line-height: 50px;
-	margin: 30px 0 30px 0;
+	font-size: 1.5rem;
+	line-height: 4rem;
+	margin: 15px 0 15px 0;
 }
 
 article > form {
@@ -38,6 +33,22 @@ article > form {
 	flex-direction: column;
 	font-size: 30px;
 	
+}
+
+table {
+	width: 100%;
+	text-align: center;
+
+}
+
+table td, table tr {
+	font-size: 1.75rem;
+	padding: 10px 0 10px 0;
+	border: 2px dashed $tertiary;
+}
+
+table tr:hover {
+	background-color: $main-light;
 }
 
 #menu {
@@ -48,17 +59,24 @@ article > form {
 	height: 70px;
 }
 
-.menu-item {
-	padding: 10px;
+nav#menu > * {
+	padding: 20px;
 }
 
-.link {
+nav#menu h1 {
+	color: $secondary-dark;
+	cursor: pointer;
+	font-size: 3rem;
+}
+
+nav#menu .link {
 	color: $secondary-light;
 	text-decoration: none;
 	transition: 200ms;
+	font-size: 1.5rem;
 }
 
-.link:hover, .link:focus {
+nav#menu .link:hover, nav#menu .link:focus {
 	color: $secondary-dark;
 	text-shadow: 1px 0 $tertiary,
 	0 1px $tertiary,
@@ -70,10 +88,6 @@ article > form {
 	-1px 1px $tertiary;
 	text-decoration: none;
 	transform: scale(1.1);
-}
-
-.title {
-	cursor: pointer;
 }
 
 .component {
