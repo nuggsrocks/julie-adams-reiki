@@ -1,45 +1,42 @@
-// dependencies
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
-//components
-import Menu from './components/menu';
-import Main from './components/main';
-import Footer from './components/footer';
-//stylesheet
 import '../scss/index.scss';
 
 
-class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			location: '/'
-		};
-		this.changeLocation = this.changeLocation.bind(this);
-	}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import aboutMeText from '../text/about-me.txt';
 
-	changeLocation(loc) {
-		this.setState({
-			location: loc
-		});
-	}
+import {splitAndFilterText} from './functions';
 
+
+const Menu = () => {
+	return (
+		<nav>
+			<h1>Julie Adams Reiki</h1>
+			<section>
+				<button>About Me</button>
+				<button>What Is Reiki</button>
+				<button>Reiki Session</button>
+				<button>Contact</button>
+			</section>
+		</nav>
+	)
+};
+
+class Main extends React.Component {
 	render() {
 		return (
-			<BrowserRouter basename='/'>
-				<Route path='/'>
-					<Menu location={this.state.location} changeLocation={this.changeLocation}/>
-					<Main location={this.state.location}/>
-					<Footer/>
-				</Route>
-			</BrowserRouter>
-		)
+			<div>
+				<Menu/>
+				{
+					splitAndFilterText(aboutMeText).map((paragraph, index) => {
+						return <p key={`paragraph ${index}`}>{paragraph}</p>
+					})
+				}
+			</div>
+		);
 	}
-}
+};
 
-if(typeof(module.hot) !== 'undefined') { // eslint-disable-line no-undef
-    module.hot.accept() // eslint-disable-line no-undef
-}
 
-ReactDOM.render(<App/>, document.getElementById('root')); // eslint-disable-line no-undef
+
+ReactDOM.render(<Main/>, document.querySelector('#root'));
