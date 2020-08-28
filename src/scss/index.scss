@@ -6,53 +6,49 @@ $tertiary: #fcfc6f;
 
 
 body {
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+}
+
+div.flexbox {
+	display: flex;
+	flex-flow: row wrap;
+	min-height: calc(100vh - 15vh - 40px);
+}
+
+div.flexbox > * {
 	background-color: $main;
 }
 
-
-h3 {
-	padding: 10px;
-	color: $tertiary;
-	background-color: $secondary-dark;
-	font-size: 2.5rem;
-	margin: 10px 0 20px 0;
+div.flexbox > *, body > header, body > footer {
+	border-radius: 10px;
+	margin: 10px;
 }
 
-
-p {
-	font-size: 1.5rem;
-	line-height: 4rem;
-	margin: 15px 0 15px 0;
-}
-
-nav {
+body > header, body > footer {
 	background-color: $tertiary;
-	display: flex;
-	flex-flow: column wrap;
+}
+
+body > header {
 	height: 10vh;
 }
 
-nav > h1 {
-	flex: 0 1 100%;
-	font-size: 4rem;
-	color: $secondary-dark;
-	margin: 0 0 0 20px;
+header > nav {
 }
 
-nav button {
-	flex: 0 1 100%;
-	background-color: transparent;
-	color: $secondary-dark;
-	border: none;
-	cursor: pointer;
-	font-size: 1.5rem;
-	margin: 0;
-	transition: all 500ms;
+body > footer {
+	height: 5vh;
 }
 
-nav button:hover {
-	color: $secondary-light;
-	transform: scale(1.2);
+div.flexbox > main {
+	width: 100vw;
+}
+
+main > form {
+	padding: 20px;
 }
 
 /*
