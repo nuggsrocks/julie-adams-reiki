@@ -1,59 +1,43 @@
-$main: #cf69ff;
-$main-light: #d885ff;
-$secondary-light: #69b6ff;
-$secondary-dark: #54abff;
-$tertiary: #fcfc6f;
-
-
 body {
-	background-color: $main;
-}
-
+  background-color: #cf69ff; }
 
 h3 {
-	padding: 10px;
-	color: $tertiary;
-	background-color: $secondary-dark;
-	font-size: 2.5rem;
-	margin: 10px 0 20px 0;
-}
-
+  padding: 10px;
+  color: #fcfc6f;
+  background-color: #54abff;
+  font-size: 2.5rem;
+  margin: 10px 0 20px 0; }
 
 p {
-	font-size: 1.5rem;
-	line-height: 4rem;
-	margin: 15px 0 15px 0;
-}
+  font-size: 1.5rem;
+  line-height: 4rem;
+  margin: 15px 0 15px 0; }
 
 nav {
-	background-color: $tertiary;
-	display: flex;
-	flex-flow: column wrap;
-	height: 10vh;
-}
+  background-color: #fcfc6f;
+  display: flex;
+  flex-flow: column wrap;
+  height: 10vh; }
 
 nav > h1 {
-	flex: 0 1 100%;
-	font-size: 4rem;
-	color: $secondary-dark;
-	margin: 0 0 0 20px;
-}
+  flex: 0 1 100%;
+  font-size: 4rem;
+  color: #54abff;
+  margin: 0 0 0 20px; }
 
 nav button {
-	flex: 0 1 100%;
-	background-color: transparent;
-	color: $secondary-dark;
-	border: none;
-	cursor: pointer;
-	font-size: 1.5rem;
-	margin: 0;
-	transition: all 500ms;
-}
+  flex: 0 1 100%;
+  background-color: transparent;
+  color: #54abff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0;
+  transition: all 500ms; }
 
 nav button:hover {
-	color: $secondary-light;
-	transform: scale(1.2);
-}
+  color: #69b6ff;
+  transform: scale(1.2); }
 
 /*
 
@@ -132,4 +116,3 @@ div#footer {
 
 
 */
-
