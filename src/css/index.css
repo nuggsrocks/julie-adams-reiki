@@ -1,3 +1,6 @@
+* {
+  font-family: Arial, sans-serif; }
+
 body {
   margin: 0; }
 
@@ -7,10 +10,15 @@ h1 {
 div.flexbox {
   display: flex;
   flex-flow: row wrap;
-  min-height: calc(100vh - 15vh - 40px); }
-
-div.flexbox > * {
-  background-color: #cf69ff; }
+  min-height: calc(100vh - 15vh - 40px);
+  width: 100vw; }
+  div.flexbox > * {
+    background-color: #cf69ff; }
+  div.flexbox > main {
+    width: 100%;
+    padding: 20px; }
+    div.flexbox > main p {
+      font-size: 1.5rem; }
 
 div.flexbox > *, body > header, body > footer {
   border-radius: 10px;
@@ -21,15 +29,30 @@ body > header, body > footer {
 
 body > header {
   height: 10vh; }
+  body > header nav {
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    body > header nav > h1 {
+      color: #54abff;
+      font-size: 3rem;
+      margin: 0 20px;
+      cursor: pointer; }
+    body > header nav > a {
+      color: #54abff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 0 20px;
+      transition: all 200ms; }
+    body > header nav > a:hover {
+      color: #cf69ff;
+      transform: scale(1.2); }
 
 body > footer {
+  color: #54abff;
+  text-align: center;
+  line-height: 5vh;
   height: 5vh; }
-
-div.flexbox > main {
-  width: 100vw; }
-
-main > form {
-  padding: 20px; }
 
 /*
 
