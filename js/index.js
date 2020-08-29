@@ -22,19 +22,21 @@ class App extends React.Component {
 		return (
 			<div>
 				<Header/>
+
 				<main className='flexbox'>
-				<Switch>
-					
-					{
-						routes.map(({path, Component}) => 
-							<Route exact path={path}>
-								<Component/>
-							</Route>
-						)
-					}
-					
-				</Switch>
+					<Switch>
+						
+						{
+							routes.map(({path, Component}) => 
+								<Route exact path={path} key={path}>
+									<Component/>
+								</Route>
+							)
+						}
+						
+					</Switch>
 				</main>
+
 				<Footer/>
 			</div>
 		);

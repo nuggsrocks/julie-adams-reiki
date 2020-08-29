@@ -11,7 +11,7 @@ const Header = (props) => {
 				
 				{
 					routes.map(({name, path}) => 
-						<Link to={path}>{name}</Link>
+						<Link to={path} key={path}>{name}</Link>
 					)
 				}
 			</nav>
