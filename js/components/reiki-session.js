@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Julie Adams Reiki: Reiki Session</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="#">
-</head>
-<body>
+import React from 'react';
 
-	<header>
-		<nav>
-			<h1>Julie Adams Reiki</h1>
-			<a href='/'>About Me</a>
-			<a href='/what-is-reiki'>What Is Reiki</a>
-			<a href='/reiki-session'>Reiki Session</a>
-			<a href='/contact'>Contact</a>
-		</nav>
-	</header>
+const ReikiSession = () => {
+	return (
+		<div>
+			<h2>Reiki Session</h2>
 
-	
-	<div class='flexbox'>
-
-		<main>
 			<p>
 				The practitioner will spend some time before the session to explain what will happen in the session and share some common reactions to Reiki. The practitioner will also discuss what issues brought the person in to receive Reiki and answer any questions they may have. 
 			</p>
+
 			<p>
 				Reiki is shared in a peaceful, quiet setting. The person may lie on a table or sit in a chair. The person is fully clothed and a blanket can be used for added warmth and comfort. Soft music may be played in the background depending the on the person’s preference.
 			</p>
@@ -40,13 +24,8 @@
 			<p>
 				After the session, the practitioner will spend more time talking with the person about their experiences. Water is recommended after a session.
 			</p>
-		</main>
+		</div>
+	);
+};
 
-	</div>
-
-
-	<footer>
-		<span>&#169; 2020 Julie Adams Reiki</span>
-	</footer>
-</body>
-</html>
+export default ReikiSession;

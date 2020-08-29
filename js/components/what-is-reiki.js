@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Julie Adams Reiki: What Is Reiki</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="#">
-</head>
-<body>
+import React from 'react';
 
-	<header>
-		<nav>
-			<h1>Julie Adams Reiki</h1>
-			<a href='/'>About Me</a>
-			<a href='/what-is-reiki'>What Is Reiki</a>
-			<a href='/reiki-session'>Reiki Session</a>
-			<a href='/contact'>Contact</a>
-		</nav>
-	</header>
+const WhatIsReiki = () => {
+	return (
+		<div>
+			<h2>What Is Reiki</h2>
 
-	
-	<div class='flexbox'>
-		<main>
 			<p>
 				Reiki is a Japanese healing energy technique used for the treatment of self and others. It was developed in the early 1900’s by a Japanese Buddhist named Mikao Usui. The word Reiki comes from the Japanese word “Rei” meaning Universal Life, and “Ki” which means energy. 
 			</p>
@@ -32,11 +16,8 @@
 			<p>
 				Reiki is not a substitute for medical care but is used as a supplement to medical treatment. Reiki is provided by practitioners in private practice as well as in hospitals throughout the world.
 			</p>
-		</main>
-	</div>
+		</div>
+	);
+};
 
-	<footer>
-		<span>&#169; 2020 Julie Adams Reiki</span>
-	</footer>
-</body>
-</html>
+export default WhatIsReiki;
