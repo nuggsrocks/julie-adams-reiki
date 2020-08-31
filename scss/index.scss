@@ -64,6 +64,8 @@ main.flexbox {
 			border: 2px solid $secondary-dark;
 		}
 
+		
+
 
 		form {
 			background-color: $tertiary;
@@ -78,7 +80,7 @@ main.flexbox {
 
 				margin-bottom: 20px;
 
-				flex: 0 1 calc(50vw - 64px);
+				flex: 0 1 calc(100vw - 128px);
 
 				label {
 					color: $secondary-dark;
@@ -87,25 +89,59 @@ main.flexbox {
 						bottom: 10px;
 						top: 10px;
 					}
-					font-size: 1.5rem;
-					width: 100%;
+					font-size: 3rem;
+					min-width: 100%;
 					display: inline-block;
-					line-height: 1.5rem;
+					line-height: 3rem;
 					cursor: pointer;
 				}
 
 				input, textarea {
-					font-size: 1.25rem;
-					line-height: 2rem;
+					font-size: 3rem;
+					padding: 1.5rem;
+
 					border: {
 						style: solid;
 						width: 2px;
-						color: $main;
+						color: $secondary-dark;
 					}
+					min-width: 100%;
+					box-sizing: border-box;
+
+					&:hover {
+						border-color: $main;
+					}
+
+					&:focus {
+						border-color: black;
+					}
+
+					&:invalid {
+						border-color: red;
+					}
+
+					
 				}
 
-				input:focus, textarea:focus {
-					border-color: $secondary-dark;
+				input#submit {
+					color: $tertiary;
+					background-color: $main;
+					border: {
+						color: $secondary-dark;
+						width: 4px;
+					}
+					cursor: pointer;
+
+					&:hover {
+						background-color: $secondary-dark;
+						color: $tertiary;
+						border-color: $main;
+					}
+
+					&:active {
+						background-color: white;
+						color: $main;
+					}
 				}
 			}
 
