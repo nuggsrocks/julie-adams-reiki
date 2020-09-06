@@ -9,4 +9,4 @@ app.get('/*', (req, res) => {
 	res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(port, () => console.log('************'));
+app.listen(port, '192.168.1.11', () => console.log('************'));
