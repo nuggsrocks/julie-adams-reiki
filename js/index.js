@@ -16,12 +16,22 @@ import routes from './routes';
 class App extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			currentLocation: '/'
+		};
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	handleClick(event) {
+		this.setState({
+			currentLocation: event.target.name
+		});
 	}
 
 	render() {
 		return (
 			<div>
-				<Header/>
+				<Header handleClick={this.handleClick} currentLocation={this.state.currentLocation}/>
 
 				<main className='flexbox'>
 					<Switch>

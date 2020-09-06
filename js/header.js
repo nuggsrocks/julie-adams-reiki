@@ -11,7 +11,10 @@ const Header = (props) => {
 				
 				{
 					routes.map(({name, path}) => 
-						<Link to={path} key={path}>{name}</Link>
+						<Link to={path} key={path} name={path} onClick={props.handleClick} 
+							className={props.currentLocation === path ? 'focus' : ''}>
+							{name}
+						</Link>
 					)
 				}
 			</nav>
