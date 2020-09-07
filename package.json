@@ -6,6 +6,7 @@
   "scripts": {
     "build:watch": "webpack --config webpack.config.js",
     "start": "pm2 start ecosystem.config.js",
+    "start:local": "pm2 start ecosystem.config.js --env=localServer",
     "start:https": "pm2 start ecosystem.config.js --env=https",
     "stop": "pm2 delete reiki",
     "test": "echo \"Error: no test specified\" && exit 1"
