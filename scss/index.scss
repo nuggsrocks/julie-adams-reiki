@@ -37,7 +37,7 @@ main.flexbox {
 			color: $blue;
 			background-color: $yellow;
 			display: inline-block;
-			margin: 20px 0 0 20px;
+			margin: 20px 0 0 30px;
 			padding: 10px;
 		}
 		
@@ -49,6 +49,8 @@ main.flexbox {
 		p {
 			margin: 20px;
 		}
+
+
 
 		hr {
 			margin: {
@@ -223,13 +225,14 @@ div#root > div > footer {
 
 			> h1 {
 				font-size: 5rem;
+				margin: 20px;
 			}
 
 			> a {
 				font-size: 2.5rem;
 				transition: none;
 				padding: 10px 0;
-				margin: 20px;
+				margin: 20px 40px;
 
 				&:hover {
 					transform: none;
@@ -248,15 +251,38 @@ div#root > div > footer {
 
 	main.flexbox {
 		> div {
+			width: 100%;
+			text-align: center;
 			> h2 {
-				
+				display: block;
+				border-radius: 0;
+				font-size: 3rem;
+				margin: 2vh 0 0 0;
 			}
-			form {
-				input, textarea {
-					font-size: 2rem;
-					padding: 1rem;
+
+			p {
+				font-size: 1.75rem;
+			}
+
+			ul {
+				list-style-position: inside;
+				padding: 0;
+				margin: 0;
+				li {
+					margin: 20px 0;
 				}
 			}
 		}
+		form {
+			input, textarea {
+				font-size: 2rem;
+				padding: 1rem;
+			}
+		}
+	}
+
+	div#root > div > footer {
+		font-size: 1.5rem;
+		padding: 10px;
 	}
 }
