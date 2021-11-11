@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 import routes from './routes';
 
@@ -8,13 +7,12 @@ const Header = (props) => {
 		<header>
 			<nav>
 				<h1>Julie Adams Reiki</h1>
-				
 				{
-					routes.map(({name, path}) => 
-						<Link to={path} key={path} name={path} onClick={props.handleClick} 
+					routes.map(({name, path}) =>
+						<button key={path} name={path} onClick={props.handleClick}
 							className={props.currentLocation === path ? 'focus' : ''}>
 							{name}
-						</Link>
+						</button>
 					)
 				}
 			</nav>

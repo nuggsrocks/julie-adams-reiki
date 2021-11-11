@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Contact = () => {
-
 	return (
 		<div>
 			<h2>Contact</h2>
@@ -28,7 +27,7 @@ const Contact = () => {
 
 				<section id='textarea'>
 					<label htmlFor='comment'>Comment</label>
-					<textarea id='comment'></textarea>
+					<textarea id='comment'/>
 				</section>
 
 				<section>
