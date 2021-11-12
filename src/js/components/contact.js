@@ -5,34 +5,32 @@ const Contact = () => {
 		<div>
 			<h2>Contact</h2>
 			<form>
-				<section>
-					<label htmlFor='name'>Name</label>
+				<label htmlFor='name'>
+					Name
 					<input type='text' name='name' id='name' pattern='([A-z]|\s){1,24}'/>
-				</section>
+				</label>
 
-				<section>
-					<label htmlFor='email'>Email</label>
+				<label htmlFor='email'>
+					Email
 					<input type='email' name='email' id='email' pattern='[A-z]{1,30}@[A-z]{1,20}(.com|.net|.org|.edu|.io)'/>
-				</section>
+				</label>
 
-				<section>
-					<label htmlFor='phone'>Phone</label>
+				<label htmlFor='phone'>
+					Phone
 					<input type='tel' name='phone' id='phone' pattern='1?-?\s?\(?[0-9]{3}\)?\s?-?[0-9]{3}-?[0-9]{4}'/>
-				</section>
+				</label>
 
-				<section>
-					<label htmlFor='subject'>Subject</label>
+				<label htmlFor='subject'>
+					Subject
 					<input type='text' name='subject' id='subject'/>
-				</section>
+				</label>
 
-				<section id='textarea'>
-					<label htmlFor='comment'>Comment</label>
+				<label htmlFor='comment'>
+					Comment
 					<textarea id='comment'/>
-				</section>
+				</label>
 
-				<section>
-					<input type='submit' value='Submit' id='submit'/>
-				</section>
+				<input type='submit' value='Submit' id='submit'/>
 			</form>
 		</div>
 		);

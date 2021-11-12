@@ -13,8 +13,6 @@ const AboutMe = () => {
 				I started taking Japanese Reiki Level 1 from Dr. Sally Littleton in the spring of 2018. It was a great experience. I continued on and earned my Reiki Levels 2 and 3 with Dr. Littleton over the next year and a half. Having a daily Reiki practice helps me to manage stress and feel better physically, emotionally, and spiritually. My family and friends feel that it helps them when I practice hands on sessions with them. I find that it makes me feel happy and more connected to Reiki when I share it with others so I started on my journey of starting my own practice.
 			</p>
 
-			<hr/>
-
 
 			<h2>Degrees &amp; Certifications</h2>
 

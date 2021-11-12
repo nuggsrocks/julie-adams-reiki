@@ -2,287 +2,143 @@ $purple: #cf69ff;
 $blue: #54abff;
 $yellow: #fcfc6f;
 
-* {
-	font-family: Arial, sans-serif;
-	border-radius: 10px;
-}
-
-*:focus {
-	outline: none;
-}
-
 body {
+	font-family: sans-serif;
 	background-color: #ECECEC;
 	margin: 0;
 }
 
-main.flexbox {
-	display: flex;
-	flex-flow: row wrap;
-	min-height: calc(100vh - 20vh - 60px);
-
-	width: 100vw;
-
-	> * {
-		background-color: $purple;
-	}
-
-	> div {
-		width: 100%;
-
-		border: 4px solid $blue;
-
-		h2 {
-			font-size: 2rem;
-			color: $blue;
-			background-color: $yellow;
-			display: inline-block;
-			margin: 20px 0 0 30px;
-			padding: 10px;
-		}
-		
-		p, li {
-			font-size: 1.5rem;
-			line-height: 3rem;
-		}
-
-		p {
-			margin: 20px;
-		}
-
-
-
-		hr {
-			margin: {
-				bottom: 20px;
-			}
-			border: 2px solid $blue;
-		}
-
-		
-
-
-		form {
-			background-color: $yellow;
-			margin: 20px 10px;
-			padding: 20px;
-
-			display: flex;
-
-			flex-flow: row wrap;
-
-			section {
-
-				margin-bottom: 20px;
-
-				flex: 0 1 100%;
-
-				label {
-					color: $blue;
-					margin: {
-						right: 10px;
-						bottom: 10px;
-						top: 10px;
-					}
-					font-size: 3rem;
-					min-width: 100%;
-					display: inline-block;
-					line-height: 3rem;
-					cursor: pointer;
-				}
-
-				input, textarea {
-					font-size: 3rem;
-					padding: 1.5rem;
-
-					border: {
-						style: solid;
-						width: 2px;
-						color: $blue;
-					}
-					width: 100%;
-
-					box-sizing: border-box;
-
-					&:hover {
-						border-color: $purple;
-					}
-
-					&:focus {
-						border-color: black;
-					}
-
-					&:invalid {
-						border-color: red;
-					}
-
-					
-				}
-
-				input#submit {
-					color: $yellow;
-					background-color: $purple;
-					border: {
-						color: $blue;
-						width: 4px;
-					}
-					cursor: pointer;
-
-					&:hover {
-						background-color: $blue;
-						color: $yellow;
-						border-color: $purple;
-					}
-
-					&:active {
-						background-color: white;
-						color: $purple;
-					}
-				}
-			}
-
-		}
-	}
-}
-
-main.flexbox > *, div#root > div > header, div#root > div > footer {
-	margin: 10px;
-}
-
-div#root > div > header, div#root > div > footer {
+header, footer {
+	font-family: serif;
+	border-radius: 10px;
+	margin: 2rem;
 	background-color: $yellow;
-	border: 4px solid $purple;
+	border: 2px solid $purple;
 }
 
-div#root > div > header {
-	min-height: 15vh;
+header {
+	min-height: 10vh;
 	display: flex;
 	align-items: center;
+
 	nav {
 		height: 100%;
 		align-items: center;
 		display: flex;
-		
-		flex-flow: row nowrap;
 
-		> h1 {
+		flex-flow: row wrap;
+
+		h1 {
 			color: $blue;
 			font-size: 4rem;
 			margin: 0 20px;
 			cursor: pointer;
 		}
 
-		> a {
-			text-decoration: none;
+		button {
 			cursor: pointer;
 			color: $blue;
 			background-color: transparent;
-			font-size: 1.5rem;
+			font-size: 1.75rem;
 			margin: 0 20px;
 			border: 0;
-			transition: all 200ms;
 
 			&:hover, &.focus, &:active {
 				color: $purple;
 			}
 
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.2);
 			}
 
 			&:active {
-				transform: scale(0.9);
+				transform: scale(1.1);
 			}
 		}
 	}
 }
 
-
-div#root > div > footer {
+footer {
 	color: $blue;
 	text-align: center;
 	line-height: 5vh;
-	height: 5vh;
 }
 
+main.flexbox {
+	display: flex;
+	flex-flow: row wrap;
+	min-height: calc(100vh - 15vh - 8rem);
 
-.preload * {
-	transition: none !important;
-}
+	width: 100vw;
 
+	> div {
+		padding: 0 3rem;
 
-@media screen and (max-width: 768px) {
-	div#root > div > header {
+		h2 {
+			margin: 0;
+			font-size: 3rem;
+			color: $purple;
+			display: inline-block;
+		}
 
-		nav {
+		p, li {
+			font-size: 1.5rem;
+			line-height: 3rem;
+		}
+
+		form {
+			display: flex;
 			flex-flow: row wrap;
 
-			text-align: center;
-
-			> * {
-				flex: 0 1 calc(100vw - 60px);
+			label {
+				color: $purple;
+				margin: 1rem 0;
+				font-size: 2rem;
+				min-width: 100%;
+				display: inline-block;
+				line-height: 4rem;
+				cursor: pointer;
 			}
 
-			> h1 {
-				font-size: 5rem;
-				margin: 20px;
-			}
+			input, textarea {
+				font-size: 3rem;
+				padding: 1rem;
 
-			> a {
-				font-size: 2.5rem;
-				transition: none;
-				padding: 10px 0;
-				margin: 20px 40px;
+				border: 2px solid black;
+				width: 100%;
+
+				box-sizing: border-box;
 
 				&:hover {
-					transform: none;
+					border-color: $purple;
 				}
 
-				&.focus {
-					transform: scale(1.1);
-					background-color: $purple;
-					color: $yellow;
+				&:focus {
+					border-color: $blue;
+				}
+
+				&:invalid {
+					border-color: red;
+				}
+			}
+
+			input#submit {
+				color: black;
+				border: 2px solid black;
+
+				cursor: pointer;
+
+				&:hover {
+					color: $purple;
+					border-color: $purple;
+				}
+
+				&:active {
+					background-color: $yellow;
+					color: $purple;
 				}
 			}
 
 		}
-	}
-
-
-	main.flexbox {
-		> div {
-			width: 100%;
-			text-align: center;
-			> h2 {
-				display: block;
-				border-radius: 0;
-				font-size: 3rem;
-				margin: 2vh 0 0 0;
-			}
-
-			p {
-				font-size: 1.75rem;
-			}
-
-			ul {
-				list-style-position: inside;
-				padding: 0;
-				margin: 0;
-				li {
-					margin: 20px 0;
-				}
-			}
-		}
-		form {
-			input, textarea {
-				font-size: 2rem;
-				padding: 1rem;
-			}
-		}
-	}
-
-	div#root > div > footer {
-		font-size: 1.5rem;
-		padding: 10px;
 	}
 }
