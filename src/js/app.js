@@ -14,7 +14,8 @@ export class App extends React.Component {
           <Routes>
             {
               routes.map(({ path, Component }) => {
-                return <Route key={path} exact path={path} element={<Component/>}/>
+                return <Route key={path} exact path={path}
+                              element={<Component/>}/>
               })
             }
           </Routes>

@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import routes from './routes'
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header>
       <nav>
