@@ -5,8 +5,8 @@ import routes from './routes'
 const Header = () => {
   return (
     <header>
+      <h1>Julie Adams Reiki</h1>
       <nav>
-        <h1>Julie Adams Reiki</h1>
         {
           routes.map(({ name, path }) => {
             return (
