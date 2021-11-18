@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhatIsReiki = () => {
   return (
-    <div>
+    <>
       <h2>What Is Reiki</h2>
 
       <p>
@@ -26,7 +26,7 @@ const WhatIsReiki = () => {
         to medical treatment. Reiki is provided by practitioners in private
         practice as well as in hospitals throughout the world.
       </p>
-    </div>
+    </>
   )
 }
 

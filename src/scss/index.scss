@@ -24,21 +24,20 @@ header {
 	nav {
 		height: 100%;
 
-		h1 {
+		h1, a {
 			font-family: serif;
 			color: $blue;
-			font-size: 4rem;
-			margin: 0 20px;
+			margin: 0 1rem;
 			cursor: pointer;
 		}
 
-		button {
-			font-family: serif;
-			cursor: pointer;
-			color: $blue;
-			background-color: transparent;
+		h1 {
+			font-size: 4rem;
+		}
+
+		a {
+			text-decoration: none;
 			font-size: 1.75rem;
-			margin: 0 20px;
 			border: 0;
 
 			&:hover, &:active {
@@ -46,7 +45,7 @@ header {
 			}
 
 			&:active {
-				transform: scale(0.95);
+				color: $blue;
 			}
 		}
 	}
@@ -64,76 +63,74 @@ main.flexbox {
 
 	width: 100vw;
 
-	> div {
-		padding: 0 3rem;
+	padding: 0 3rem;
 
-		h2 {
-			margin: 0;
-			font-size: 3rem;
+	h2 {
+		margin: 0;
+		font-size: 3rem;
+		color: $purple;
+		display: inline-block;
+	}
+
+	p, li {
+		font-size: 1.5rem;
+		line-height: 3rem;
+	}
+
+	form {
+		display: flex;
+		flex-flow: row wrap;
+
+		label {
 			color: $purple;
+			margin: 1rem 0;
+			font-size: 2rem;
+			min-width: 100%;
 			display: inline-block;
+			line-height: 4rem;
+			cursor: pointer;
 		}
 
-		p, li {
-			font-size: 1.5rem;
-			line-height: 3rem;
+		input, textarea {
+			font-size: 3rem;
+			padding: 1rem;
+
+			border: 2px solid black;
+			border-radius: 10px;
+
+			width: 100%;
+
+			box-sizing: border-box;
+
+			&:hover {
+				border-color: $purple;
+			}
+
+			&:focus {
+				border-color: $blue;
+			}
+
+			&:invalid {
+				border-color: red;
+			}
 		}
 
-		form {
-			display: flex;
-			flex-flow: row wrap;
+		input#submit {
+			color: black;
+			border: 2px solid black;
 
-			label {
+			cursor: pointer;
+
+			&:hover {
 				color: $purple;
-				margin: 1rem 0;
-				font-size: 2rem;
-				min-width: 100%;
-				display: inline-block;
-				line-height: 4rem;
-				cursor: pointer;
+				border-color: $purple;
 			}
 
-			input, textarea {
-				font-size: 3rem;
-				padding: 1rem;
-
-				border: 2px solid black;
-				border-radius: 10px;
-
-				width: 100%;
-
-				box-sizing: border-box;
-
-				&:hover {
-					border-color: $purple;
-				}
-
-				&:focus {
-					border-color: $blue;
-				}
-
-				&:invalid {
-					border-color: red;
-				}
+			&:active {
+				background-color: $yellow;
+				color: $purple;
 			}
-
-			input#submit {
-				color: black;
-				border: 2px solid black;
-
-				cursor: pointer;
-
-				&:hover {
-					color: $purple;
-					border-color: $purple;
-				}
-
-				&:active {
-					background-color: $yellow;
-					color: $purple;
-				}
-			}
-
 		}
+
 	}
 }

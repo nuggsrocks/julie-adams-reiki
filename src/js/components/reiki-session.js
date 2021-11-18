@@ -2,7 +2,7 @@ import React from 'react'
 
 const ReikiSession = () => {
   return (
-    <div>
+    <>
       <h2>Reiki Session</h2>
 
       <p>
@@ -37,7 +37,7 @@ const ReikiSession = () => {
         the person about their experiences. Water is recommended after a
         session.
       </p>
-    </div>
+    </>
   )
 }
 

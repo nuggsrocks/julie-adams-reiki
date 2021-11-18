@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
+    <>
       <h2>Contact</h2>
       <form>
         <label htmlFor='name'>
@@ -38,7 +38,7 @@ const Contact = () => {
 
         <input type='submit' value='Submit' id='submit'/>
       </form>
-    </div>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import routes from './routes'
 
 const Header = (props) => {
@@ -10,12 +10,9 @@ const Header = (props) => {
         {
           routes.map(({ name, path }) => {
             return (
-              <button
-                key={path} name={path} onClick={props.onClick}
-                className={props.currentLocation === path ? 'focus' : ''}
-              >
+              <Link key={path} to={path}>
                 {name}
-              </button>
+              </Link>
             )
           })
         }
