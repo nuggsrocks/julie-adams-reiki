@@ -9,7 +9,6 @@ body {
 }
 
 header, footer {
-	font-family: serif;
 	border-radius: 10px;
 	margin: 2rem;
 	background-color: $yellow;
@@ -17,18 +16,16 @@ header, footer {
 }
 
 header {
-	min-height: 10vh;
 	display: flex;
 	align-items: center;
 
+	padding: 2rem 0;
+
 	nav {
 		height: 100%;
-		align-items: center;
-		display: flex;
-
-		flex-flow: row wrap;
 
 		h1 {
+			font-family: serif;
 			color: $blue;
 			font-size: 4rem;
 			margin: 0 20px;
@@ -36,6 +33,7 @@ header {
 		}
 
 		button {
+			font-family: serif;
 			cursor: pointer;
 			color: $blue;
 			background-color: transparent;
@@ -43,16 +41,12 @@ header {
 			margin: 0 20px;
 			border: 0;
 
-			&:hover, &.focus, &:active {
+			&:hover, &:active {
 				color: $purple;
 			}
 
-			&:hover {
-				transform: scale(1.2);
-			}
-
 			&:active {
-				transform: scale(1.1);
+				transform: scale(0.95);
 			}
 		}
 	}
@@ -67,7 +61,6 @@ footer {
 main.flexbox {
 	display: flex;
 	flex-flow: row wrap;
-	min-height: calc(100vh - 15vh - 8rem);
 
 	width: 100vw;
 
@@ -105,6 +98,8 @@ main.flexbox {
 				padding: 1rem;
 
 				border: 2px solid black;
+				border-radius: 10px;
+
 				width: 100%;
 
 				box-sizing: border-box;
