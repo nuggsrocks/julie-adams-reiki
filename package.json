@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/js/app.js",
   "scripts": {
-    "build:dev": "webpack serve --config webpack.dev.js",
+    "webpack-dev-server": "webpack serve --config webpack.dev.js",
+    "build:dev": "rm -rf public && webpack --config webpack.dev.js --watch",
     "build:prod": "rm -rf public && webpack --config webpack.prod.js",
     "start": "node server.js",
     "standard": "standard --fix"
