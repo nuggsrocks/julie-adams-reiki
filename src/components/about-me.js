@@ -33,7 +33,7 @@ const AboutMe = () => {
           1976
         </li>
 
-        <li>St Joseph’s College of Maine- Bachelor of Science in Psychology-
+        <li>St Joseph&apos;s College of Maine- Bachelor of Science in Psychology-
           1996
         </li>
 

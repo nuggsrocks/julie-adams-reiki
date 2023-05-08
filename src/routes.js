@@ -7,7 +7,7 @@ const routes = [
   { name: 'About Me', path: '/', Component: AboutMe },
   { name: 'What Is Reiki', path: '/what-is-reiki', Component: WhatIsReiki },
   { name: 'Reiki Session', path: '/reiki-session', Component: ReikiSession },
-  { name: 'Contact', path: '/contact', Component: Contact },
+  { name: 'Contact', path: '/contact', Component: Contact }
 ]
 
 export default routes

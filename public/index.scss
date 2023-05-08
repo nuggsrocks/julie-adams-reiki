@@ -5,17 +5,14 @@ $yellow: #fcfc6f;
 body {
 	font-family: sans-serif;
 	background-color: #ECECEC;
-	margin: 0;
-}
-
-header, main, footer {
-	margin: 2rem;
-	border: 2px solid $purple;
-	border-radius: 10px;
+	margin: 3rem;
 }
 
 header, footer {
 	background-color: $yellow;
+	margin: 2rem;
+	border: 2px solid $purple;
+	border-radius: 10px;
 }
 
 header {
@@ -59,18 +56,25 @@ footer {
 }
 
 main.flexbox {
-	padding: 3rem;
+	padding: 0 1rem;
 
 	h2 {
-		margin: 0;
-		font-size: 3rem;
+		margin: 1rem;
+		padding: 1rem 2rem;
+		font-size: 2.5rem;
 		color: $purple;
 		display: inline-block;
+		border: 2px solid $purple;
+		border-radius: 10px;
 	}
 
 	p, li {
-		font-size: 1.5rem;
-		line-height: 3rem;
+		margin: 1rem;
+		font-size: 1.2rem;
+	}
+
+	p {
+		line-height: 2.4rem;
 	}
 
 
