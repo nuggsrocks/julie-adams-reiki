@@ -5,139 +5,31 @@ $yellow: #fcfc6f;
 body {
 	font-family: sans-serif;
 	background-color: #ECECEC;
-	margin: 3rem;
+	margin: 0;
 }
 
-header, footer {
-	background-color: $yellow;
-	margin: 2rem;
-	border: 2px solid $purple;
-	border-radius: 10px;
+.animate {
+	height: calc(100vh - 16rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 4rem;
+	padding: 4rem;
 }
 
 header {
-	padding: 2rem;
-
-	h1, a {
-		color: $blue;
-		cursor: pointer;
-	}
-
-	h1 {
-		font-family: serif;
-		font-size: 5rem;
-		margin: 0;
-	}
-
-	nav {
-		display: flex;
-		flex-flow: row wrap;
-
-		a {
-			text-decoration: none;
-			font-size: 2.5rem;
-			margin: 1rem 2rem 1rem 0;
-
-			&:hover, &:active {
-				color: $purple;
-			}
-
-			&:active {
-				color: $blue;
-			}
-		}
-	}
+	font-family: 'Times New Roman', Times, serif;
 }
 
-footer {
-	color: $blue;
-	text-align: center;
-	line-height: 5vh;
+h1 {
+	font-size: 4em;
 }
 
-main.flexbox {
-	padding: 0 1rem;
-
-	h2 {
-		margin: 1rem;
-		padding: 1rem 2rem;
-		font-size: 2.5rem;
-		color: $purple;
-		display: inline-block;
-		border: 2px solid $purple;
-		border-radius: 10px;
-	}
-
-	p, li {
-		margin: 1rem;
-		font-size: 1.2rem;
-	}
-
-	p {
-		line-height: 2.4rem;
-	}
-
-
-	form {
-		display: flex;
-		flex-flow: row wrap;
-
-		label {
-			color: $purple;
-			margin: 1rem 0;
-			font-size: 2rem;
-			min-width: 100%;
-			display: inline-block;
-			line-height: 4rem;
-			cursor: pointer;
-		}
-
-		input, textarea {
-			font-size: 3rem;
-			padding: 1rem;
-
-			border: 2px solid black;
-			border-radius: 10px;
-
-			width: 100%;
-
-			box-sizing: border-box;
-
-			&:hover {
-				border-color: $purple;
-			}
-
-			&:focus {
-				border-color: $blue;
-			}
-
-			&:invalid {
-				border-color: red;
-			}
-		}
-
-		input#submit {
-			color: black;
-			border: 2px solid black;
-
-			cursor: pointer;
-
-			&:hover {
-				color: $purple;
-				border-color: $purple;
-			}
-
-			&:active {
-				background-color: $yellow;
-				color: $purple;
-			}
-		}
-
-	}
+h3 {
+	font-size: 3em;
 }
 
-@media (max-width: 800px) {
-	header nav {
-		flex-flow: column nowrap;
-	}
+p {
+	font-size: 1.5em;
 }
