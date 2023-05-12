@@ -1,11 +1,11 @@
 import React from 'react'
-import Animate from './components/Animate'
+import Animate from './Animate'
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Animate>
+        <Animate className="splash">
           <header>
             <h1>Julie Adams Reiki</h1>
           </header>

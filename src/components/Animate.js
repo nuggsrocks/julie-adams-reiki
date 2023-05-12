@@ -1,47 +1,18 @@
-import React, { useRef, useEffect } from 'react'
-import { motion, useAnimation } from 'framer-motion'
+import React, { useRef } from 'react'
+import { motion } from 'framer-motion'
 
-const Animate = ({ duration = 0.5, children }) => {
+const Animate = ({ className = '', children }) => {
   const ref = useRef()
-  const controls = useAnimation()
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(entry.isIntersecting)
-        if (entry.isIntersecting) {
-          controls.start({
-            opacity: 1,
-            transition: { duration, ease: 'easeInOut' },
-          })
-        } else {
-          controls.start({
-            opacity: 0,
-            transition: { duration, ease: 'easeInOut' },
-          })
-        }
-      },
-      {
-        threshold: 0.5,
-      }
-    )
-
-    observer.observe(ref.current)
-
-    return () => {
-      observer.unobserve(ref.current)
-    }
-  }, [ref])
 
   return (
-    <motion.div
-      className="animate"
+    <motion.section
+      className={className}
       ref={ref}
-      initial={{ opacity: 0 }}
-      animate={controls}
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: className.includes('splash') ? 0 : -200 }}
     >
       {children}
-    </motion.div>
+    </motion.section>
   )
 }
 
