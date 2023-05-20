@@ -1,15 +1,28 @@
-import React from 'react'
-import Animate from './Animate'
+import React, { useEffect, useRef } from 'react'
 
 const App = () => {
+  const ref = useRef(null)
+  
+  useEffect(() => {
+    ref.current.onwheel = (e) => {
+      e.preventDefault()
+      document.querySelector('.splash').style.setProperty('height', 'calc(5vh - 16rem)')
+  
+      setTimeout(() => {
+        ref.current.onwheel = null
+      }, 500)
+      
+    }
+  })
+
   return (
-    <div>
-      <Animate className='splash'>
+    <div ref={ref}>
+      <section className='splash'>
         <header>
           <h1>Julie Adams Reiki</h1>
         </header>
-      </Animate>
-      <Animate>
+      </section>
+      <section>
         <header>
           <h3>About Me</h3>
         </header>
@@ -35,8 +48,8 @@ const App = () => {
           Reiki when I share it with others so I started on my journey of
           starting my own practice.
         </p>
-      </Animate>
-      <Animate>
+      </section>
+      <section>
         <h2>What Is Reiki</h2>
 
         <p>
@@ -61,8 +74,8 @@ const App = () => {
           to medical treatment. Reiki is provided by practitioners in private
           practice as well as in hospitals throughout the world.
         </p>
-      </Animate>
-      <Animate>
+      </section>
+      <section>
         <h2>Reiki Session</h2>
 
         <p>
@@ -97,8 +110,8 @@ const App = () => {
           the person about their experiences. Water is recommended after a
           session.
         </p>
-      </Animate>
-      <Animate>
+      </section>
+      <section>
         <h3>Contact</h3>
         <form>
           <label htmlFor='name'>
@@ -143,7 +156,7 @@ const App = () => {
 
           <input type='submit' value='Submit' id='submit' />
         </form>
-      </Animate>
+      </section>
     </div>
   )
 }

@@ -1,38 +1,17 @@
-$purple: #cf69ff;
-$blue: #54abff;
-$yellow: #fcfc6f;
-
-body {
-	font-family: sans-serif;
-	background-color: #ECECEC;
-	margin: 0;
-}
+// html {
+// 	scroll-snap-type: y mandatory;
+// }
 
 section {
 	display: flex;
+	flex-flow: column nowrap;
+	margin: 8rem;
 	justify-content: center;
 	align-items: center;
-	flex-flow: row wrap;
-	margin: 4rem;
+	// scroll-snap-align: center;
+	transition: height 0.5s ease;
 }
 
 .splash {
-	height: calc(100vh);
-	margin: 0;
-}
-
-header {
-	font-family: 'Times New Roman', Times, serif;
-}
-
-h1 {
-	font-size: 4em;
-}
-
-h3 {
-	font-size: 3em;
-}
-
-p {
-	font-size: 1.5em;
+	height: calc(100vh - 16rem);
 }
