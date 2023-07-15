@@ -17,10 +17,8 @@ const App = () => {
 
   return (
     <div ref={ref}>
-      <section className='splash'>
-        <header>
-          <h1>Julie Adams Reiki</h1>
-        </header>
+      <section className='container-fluid text-center p-5'>
+        <h1>Julie Adams Reiki</h1>
       </section>
       <section>
         <header>

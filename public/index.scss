@@ -1,17 +1,1 @@
-// html {
-// 	scroll-snap-type: y mandatory;
-// }
-
-section {
-	display: flex;
-	flex-flow: column nowrap;
-	margin: 8rem;
-	justify-content: center;
-	align-items: center;
-	// scroll-snap-align: center;
-	transition: height 0.5s ease;
-}
-
-.splash {
-	height: calc(100vh - 16rem);
-}
+@import "bootstrap/scss/bootstrap";
