@@ -48,6 +48,7 @@ const App = () => {
       <Section id='about'>
         <h3 className='text-primary'>About Me</h3>
 
+        <div className='py-3'>
         <p>
           I worked for more than 35 years as a registered nurse specializing in
           neonatal intensive care. During that time, I took a Therapeutic Touch
@@ -75,40 +76,37 @@ const App = () => {
           makes me feel grateful and more connected to Reiki when I share it
           with others.
         </p>
+        </div>
 
-        <div className='card border border-primary'>
-          <div className='card-body'>
-            <h5 className='card-title text-secondary'>Qualifications</h5>
+            <h5 className='text-secondary'>Qualifications</h5>
             <ul className='list-group list-group-flush'>
               <li className='list-group-item'>
-                Shoden- Reiki First Degree- June 2018
+                Shoden (Reiki First Degree) - June 2018
               </li>
               <li className='list-group-item'>
-                Okuden- Reiki Second Degree- October 2018
+                Okuden (Reiki Second Degree) - October 2018
               </li>
               <li className='list-group-item'>
-                Shinpiden- Reiki Master Practitioner- June 2019
+                Shinpiden (Reiki Master Practitioner) - June 2019
               </li>
               <li className='list-group-item'>
-                Animal Reiki Practitioner- September 2019
+                Animal Reiki Practitioner - September 2019
               </li>
               <li className='list-group-item'>
-                Energy Healing Certification- Northwestern Community College-
-                July 2020
+                Energy Healing Certification - Northwestern Community College - July 2020
               </li>
               <li className='list-group-item'>
-                Gokuikaiden- Shihan, Master Teacher- May 2021
+                Gokuikaiden (Shihan, Master Teacher) - May 2021
               </li>
               <li className='list-group-item'>
                 Member of the Rieki Healing Association
               </li>
             </ul>
-          </div>
-        </div>
       </Section>
       <Section id='what-is-reiki'>
         <h3 className='text-primary'>What Is Reiki</h3>
 
+        <div className='py-3'>
         <p>
           Reiki is a Japanese healing energy technique used for the treatment of
           self and others. It was developed in the early 1900&apos;s by a
@@ -128,9 +126,11 @@ const App = () => {
           is provided by practitioners in private practice as well as in
           hospitals and clinics throughout the world.
         </p>
+        </div>
       </Section>
       <Section id='reiki-session'>
         <h3 className='text-primary'>Reiki Session</h3>
+        <div className='py-3'>
         <p>
           The practitioner will spend some time before the session to explain
           what will happen in the session and share some common reactions to
@@ -150,9 +150,12 @@ const App = () => {
           time talking with the person about their experiences. Water is
           recommended after a session to enhance the Reiki.
         </p>
+        </div>
       </Section>
       <Section id='services'>
         <h3 className='text-primary'>Services</h3>
+
+        <div className='py-3'>
         <p>
           I offer Reiki sessions by appointment in person and virtually on
           FaceTime or Zoom. My in person sessions will be held at The Box
@@ -166,6 +169,7 @@ const App = () => {
           One hour in person sessions- $50 Virtual sessions- $40 Payments can be
           made by cash, check, or PayPal
         </p>
+        </div>
       </Section>
       <Section id='contact'>
         <h3 className='text-primary'>Contact</h3>
